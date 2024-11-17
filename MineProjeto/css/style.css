@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+}
+.pai {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  border: 1px solid black;
+  background: linear-gradient(to left, red, blue);
+}
+.form {
+  display: grid;
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.label {
+  margin: 5px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: royalblue;
+  text-align: center;
+}
+.form input {
+  border: 2px solid gray; /* Borda padrão */
+  padding: 5px;
+  transition: border-color 0.3s ease; /* Animação suave */
+}
+.form input:hover {
+  border-color: rgb(255, 0, 0);
+}
+#button {
+  margin-top: 20px;
+}
+.mensagem {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  width: fit-content;
+  color: rgb(0, 77, 192);
+}

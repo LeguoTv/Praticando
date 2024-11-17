@@ -1,0 +1,31 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mineprojeto";
+
+// conectar ao banco de dados
+$conn = new mysqli("localhost","root","","mineprojeto");
+
+//verificar conexão
+if ($conn -> connect_error) {
+    die ("Conexão falhou: " . $conn -> connect_error);
+}
+
+//obter dados do formulário
+$nome = $_POST["nome"];
+$senha = $_POST["senha"];
+
+// Inserir dados na tabela de usuários
+$sql = "INSERT INTO login (nome, senha) VALUES ('$nome', '$senha')";
+
+if($conn -> query($sql) === TRUE) {
+    echo "Novo usuário cadastrado com sucesso!";
+} else {
+    echo"Erro: " . $sql . "<br>" . $conn->error;
+}
+
+//se caso falhar conexão
+$conn->close();
+?>
